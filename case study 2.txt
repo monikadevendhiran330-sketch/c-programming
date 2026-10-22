@@ -1,0 +1,55 @@
+Medical Device Data Using a Union
+Question: A medical device stores either an integer pulse reading or a floating-point temperature reading in the same memory location. Write a C program using a union.
+
+
+Algorithm:
+
+1.Start.
+2.Define a union named MedicalData with pulse and temperature.
+3.Declare a union variable data.
+4.Store and display the pulse reading.
+5.Store and display the temperature reading.
+6.Stop.
+
+
+Flow chart:
+
+
+START
+↓
+Define union MedicalData
+↓
+Declare union variable
+↓
+Store pulse reading = 75
+↓
+Display pulse reading
+↓
+Store temperature reading = 36.8
+↓
+Display temperature reading
+↓
+STOP
+
+
+  C program:
+
+#include <stdio.h>
+
+union MedicalData {
+int pulse;
+float temperature;
+};
+
+int main() {
+union MedicalData data;
+
+data.pulse = 75;
+printf("Pulse Reading = %d\n", data.pulse);
+
+data.temperature = 36.8;
+printf("Temperature Reading = %.1f\n",
+data.temperature);
+
+return 0;
+}
